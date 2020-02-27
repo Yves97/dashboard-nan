@@ -1,4 +1,15 @@
 /************->VARIABLES*********<-*/
+:root {
+    --color-white:#fff;
+    --color-purple: #7780fe;
+    --color-dark: #3a3a3a;
+    --color-green-light: #17a2b8;
+    --color-grey-light: rgb(228, 232, 238);
+    --color-red: red;
+    --color-min-grey: rgb(181, 201, 230);
+    --color-grey-fade: #b5b5b5;
+    --color-green-fade: #c7efe566;
+}
 /*------------------------------------*/
 
 
@@ -21,4 +32,58 @@ body{
     box-sizing: border-box;
     font-size: 1.6rem;
 }
+
+ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 /*------------------------------------*/
+
+/***INDEX PAGE****/
+
+.nav{
+    background: var(--color-grey-light);
+    padding:1rem 2rem;
+    border-bottom: 1px solid var(--color-purple);
+    position: relative;
+}
+
+.nav img:first-child , .img-profil{
+    height: 5rem;
+    width: 5rem;
+    margin-right: 1rem;
+}
+
+.img-profil{
+    position: absolute;
+    right: 1rem;
+    border-radius: 50%;
+}
+
+.btn-search{
+    cursor: pointer;
+    margin-right: -.5rem;
+    padding: .5rem 1rem;
+    border:none;
+    background: var(--color-purple);
+}
+
+.btn-search > i{
+    color: var(--color-white);
+}
+
+.btn-search + input{
+    width:30rem;
+    padding: .5rem 1rem;
+    border:none;
+    outline:none;
+}
