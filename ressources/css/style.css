@@ -124,7 +124,7 @@ a:hover{
     outline: none;
 }
 
-.sidebar a .create-btn, .sidebar a .load-btn{
+.sidebar a .create-btn, .sidebar a .load-btn,.box-actions .func-card + a button{
     cursor: pointer;
     border: 1px solid var(--color-white);
     border-radius: 3px;
@@ -138,7 +138,7 @@ a:hover{
     box-shadow: var(--default-shadow);
 }
 
-.sidebar a .create-btn:hover, .sidebar a .load-btn:hover{
+.sidebar a .create-btn:hover, .sidebar a .load-btn:hover,.box-actions .func-card + a button:hover{
     background: var(--color-green-light);
     border: 1px solid var(--color-green-light);
     color: var(--color-white);
@@ -180,10 +180,39 @@ a:hover{
 .box-actions{
     margin-top: 3rem;
     padding-top: 3rem;
+    text-align: center;
 }
 
 .box-actions .func-card{
-    height: 30rem;
-    /* background: red; */
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    z-index: 2;
 }
 
+.box-actions .func-card::after{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--color-green-light);
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--default-transition);
+}
+
+.box-actions .func-card:hover::after{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+.box-actions .func-card p{
+    width: 80%;
+    margin: 3.5rem auto 2rem;
+}
