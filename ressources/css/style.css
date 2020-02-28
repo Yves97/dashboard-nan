@@ -13,6 +13,7 @@
     --color-red: rgb(236, 17, 17);
     --default-transition: all .2s;
     --default-shadow : 0 0 5px rgba(0, 0, 0, 0.247);
+    --color-orange: rgb(233, 96, 4);
 
 }
 /*------------------------------------*/
@@ -301,7 +302,7 @@ a:hover{
     background: var(--white-fade);
 }
 
-.btn-act, .btn-agree,.btn-desagree,.btn-download{
+.btn-act, .btn-agree,.btn-desagree,.btn-download,.btn-save{
     cursor: pointer;
     font-size: 1.3rem;
     border: none;
@@ -333,3 +334,6 @@ a:hover{
     background: var(--color-purple);
 }
 
+.btn-save{
+    background: var(--color-orange);
+}
