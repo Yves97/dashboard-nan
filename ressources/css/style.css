@@ -307,13 +307,12 @@ a:hover{
     margin-top:5rem;
 } */
 
-.all-files h3{
-    margin-bottom: 2rem;
+.all-files .num-items{
+    padding-right: 1rem;
 }
 
-.all-files p{
-    width: 60%;
-    margin: 4rem auto;
+.all-files .num-items p{
+    text-align: right;
 }
 
 .all-files .modal-header{
