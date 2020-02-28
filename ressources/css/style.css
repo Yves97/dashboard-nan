@@ -9,6 +9,7 @@
     --color-min-grey: rgb(181, 201, 230);
     --color-grey-fade: #b5b5b5;
     --color-green-fade: #c7efe566;
+    --default-transition: all .2s;
 }
 /*------------------------------------*/
 
@@ -86,4 +87,33 @@ a:hover{
     padding: .5rem 1rem;
     border:none;
     outline:none;
+}
+
+.sidebar{
+    width: 30rem;
+    height: 100%;
+    position: fixed;
+    background: var(--color-purple);
+}
+
+.content{
+    margin-left: 30rem;
+}
+
+.sidebar-control{
+    cursor: pointer;
+    height: 4.5rem;
+    width: 4.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 10rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.247);
+    transition: var(--default-transition);
+}
+
+.sidebar-control:focus{
+    outline: none;
 }
