@@ -56,17 +56,41 @@
             <a href="#">
                 <button class="create-btn">Créer</button>
             </a>
-            <a href="#">
-                <button class="load-btn">Charger</button>
-            </a>
+            <!--upload file-->
+            <button type="button" class="load-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                Upload un fichier
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Upload de fichier</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <form action="">
+                        <div class="modal-body">
+                            
+                                <input type="file" name="" id="">
+                            
+                        </div>
+                        <div class="modal-footer lft-box_two">
+                        <button type="submit" data-dismiss="modal">Charger</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
             <div class="sidebar-text_content">
                 <ul>
                     <li>
                         <a href="all-files.html">Tout les fichiers</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#">Favoris</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#">Dossiers</a>
                     </li>

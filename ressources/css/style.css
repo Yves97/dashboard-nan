@@ -62,6 +62,10 @@ a:hover{
     align-items: center;
 }
 
+.modal-backdrop{
+    z-index: 2;
+}
+
 /*------------------------------------*/
 
 /***INDEX PAGE****/
@@ -141,7 +145,7 @@ a:hover{
     outline: none;
 }
 
-.sidebar a .create-btn, .sidebar a .load-btn,.lft-box_two button{
+.sidebar a .create-btn, .sidebar .load-btn,.lft-box_two button{
     cursor: pointer;
     border: 1px solid var(--color-white);
     border-radius: 3px;
@@ -155,7 +159,7 @@ a:hover{
     box-shadow: var(--default-shadow);
 }
 
-.sidebar a .create-btn:hover, .sidebar a .load-btn:hover,.lft-box_two button:hover{
+.sidebar a .create-btn:hover, .sidebar .load-btn:hover,.lft-box_two button:hover{
     background: var(--color-green-light);
     border: 1px solid var(--color-green-light);
     color: var(--color-white);
