@@ -47,7 +47,7 @@
         <img class="img-profil" src="ressources/images/photo.png" alt="profil">
     </nav>
     <section class="main-content">
-        <!--*
+<!--*
             sidebar*
         -->
         <button class="sidebar-control">
@@ -57,17 +57,41 @@
             <a href="#">
                 <button class="create-btn">Créer</button>
             </a>
-            <a href="#">
-                <button class="load-btn">Charger</button>
-            </a>
+            <!--upload file-->
+            <button type="button" class="load-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Upload 
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Upload de fichier</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!--form upload-->
+                    <form action="">
+                        <div class="modal-body">
+                            <input type="file" name="" id="">
+                        </div>
+                        <div class="modal-footer lft-box_two">
+                            <button type="submit">Charger</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
             <div class="sidebar-text_content">
                 <ul>
                     <li>
                         <a href="all-files.html">Tout les fichiers</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#">Favoris</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#">Dossiers</a>
                     </li>
@@ -112,37 +136,41 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Etes vous sur de vouloir Supprimer ?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <form action="">
+                                                        <button type="submit" class="btn-agree">
+                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                            Oui
+                                                        </button>
+                                                    </form>
+                                                    <button type="button" class="btn-desagree" data-dismiss="modal">
+                                                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                        Non
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <p>Etes vous sur de vouloir Supprimer ?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                            <form action="">
-                                                <button type="submit" class="btn-agree">
-                                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                    Oui
-                                                </button>
-                                            </form>
-                                            <button type="button" class="btn-desagree" data-dismiss="modal">
-                                                <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                                                Non
-                                            </button>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
+                                    <button class="btn-download">
+                                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                        Télécharger
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <i class="fa fa-file" aria-hidden="true"></i>
-                                    cours js
+                                    cours css
                                 </td>
                                 <td>
                                     <!--ajouter fichier-->
@@ -153,31 +181,41 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Etes vous sur de vouloir Supprimer ?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <form action="">
+                                                        <button type="submit" class="btn-agree">
+                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                            Oui
+                                                        </button>
+                                                    </form>
+                                                    <button type="button" class="btn-desagree" data-dismiss="modal">
+                                                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                        Non
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <p>Etes vous sur de vouloir Supprimer ?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                            <form action="">
-                                                <button type="submit" class="btn-agree">Oui</button>
-                                            </form>
-                                            <button type="button" class="btn-desagree" data-dismiss="modal">Non</button>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
+                                    <button class="btn-download">
+                                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                        Télécharger
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <i class="fa fa-file" aria-hidden="true"></i>
-                                    cours python
+                                    cours css
                                 </td>
                                 <td>
                                     <!--ajouter fichier-->
@@ -188,25 +226,35 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Etes vous sur de vouloir Supprimer ?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <form action="">
+                                                        <button type="submit" class="btn-agree">
+                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                            Oui
+                                                        </button>
+                                                    </form>
+                                                    <button type="button" class="btn-desagree" data-dismiss="modal">
+                                                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                        Non
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <p>Etes vous sur de vouloir Supprimer ?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                            <form action="">
-                                                <button type="submit" class="btn-agree">Oui</button>
-                                            </form>
-                                            <button type="button" class="btn-desagree" data-dismiss="modal">Non</button>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
+                                    <button class="btn-download">
+                                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                        Télécharger
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
