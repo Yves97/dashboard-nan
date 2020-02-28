@@ -8,7 +8,6 @@
     <!--***CSS ressources***-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="ressources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="ressources/css/style.css">
 
     <!--***favIcons***-->
@@ -55,12 +54,12 @@
         <img class="img-profil" src="ressources/images/photo.png" alt="profil">
     </nav>
     <section class="main-content">
-        <!--*
+<!--*
             sidebar*
         -->
-        <button class="sidebar-control">
+        <!-- <button class="sidebar-control">
             <img src="ressources/images/menu.svg" alt="menu">
-        </button>
+        </button> -->
         <div class="sidebar">
             <a href="#">
                 <button class="create-btn">Créer</button>
@@ -118,144 +117,182 @@
             end sidebar
         *-->
         <div class="content all-files">
-            <div class="container">
-                <h3>Corbeille</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptates incidunt et ratione asperiores voluptatibus pariatur aliquam sint hic? Maiores, veritatis? Mollitia porro ut excepturi voluptates dignissimos aliquid ratione tempore?</p>
-                <div class="tab-files">
-                    <table id="example" class="display" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Nom</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <i class="fa fa-file" aria-hidden="true"></i>
+            <div class="num-items">
+                <p>Nombre d'éléments : <span class="badge badge-info">6</span></p>
+            </div>
+            <div class="tab-files">
+                <table id="main-table" class="table table-striped  table-inverse" style="width:100%">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th></th>
+                            <th>Nom</th>
+                            <th>Actions</th>
+                            <th>Modifié par</th>
+                            <th>Dernière Ouverture</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">
+                                <form action="" style="display: inline;">
+                                    <input type="checkbox" name="" id="" style="margin-right: 1.5rem;">
+                                </form>
+                                <a href="#" class="favorite">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </a>
+                                <i class="fa fa-file" aria-hidden="true"></i>
+                            </td>
+                            <td>
+                                <a href="#">
                                     cours css
-                                </td>
-                                <td>
-                                    <!--ajouter fichier-->
-                                    <button type="button" class="btn-save" data-toggle="modal" data-target="#staticBackdrop">
-                                        <i class="fa fa-recycle" aria-hidden="true"></i>
-                                        Recupérer
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">Récupération</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
+                                </a>
+                            </td>
+                            <td>
+                                <!--recupérer fichier-->
+                                <button type="button" class="btn-save" data-toggle="modal" data-target="#staticBackdrop">
+                                    <i class="fa fa-recycle" aria-hidden="true"></i>
+                                    Récupérer
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Etes vous sur de vouloir le récupérer ?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="">
+                                                    <button type="submit" class="btn-agree">
+                                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                        Oui
                                                     </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Etes vous sur de vouloir le récupérer ?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <form action="">
-                                                        <button type="submit" class="btn-agree">
-                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                            Oui
-                                                        </button>
-                                                    </form>
-                                                    <button type="button" class="btn-desagree" data-dismiss="modal">
-                                                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                                                        Non
-                                                    </button>
-                                                </div>
+                                                </form>
+                                                <button type="button" class="btn-desagree" data-dismiss="modal">
+                                                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                    Non
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fa fa-file" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>Moi</td>
+                            <td>17:00</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">
+                                <form action="" style="display: inline;">
+                                    <input type="checkbox" name="" id="" style="margin-right: 1.5rem;">
+                                </form>
+                                <a href="#" class="favorite">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </a>
+                                <i class="fa fa-folder" aria-hidden="true"></i>
+                            </td>
+                            <td>
+                                <a href="#">
                                     cours css
-                                </td>
-                                <td>
-                                    <!--ajouter fichier-->
-                                    <button type="button" class="btn-save" data-toggle="modal" data-target="#staticBackdrop">
-                                        <i class="fa fa-recycle" aria-hidden="true"></i>
-                                        Récupérer
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">Récupération</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
+                                </a>
+                            </td>
+                            <td>
+                                <!--recupérer fichier-->
+                                <button type="button" class="btn-save" data-toggle="modal" data-target="#staticBackdrop">
+                                    <i class="fa fa-recycle" aria-hidden="true"></i>
+                                    Récupérer
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Etes vous sur de vouloir le récupérer ?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="">
+                                                    <button type="submit" class="btn-agree">
+                                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                        Oui
                                                     </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Etes vous sur de vouloir le récupérer  ?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <form action="">
-                                                        <button type="submit" class="btn-agree">
-                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                            Oui
-                                                        </button>
-                                                    </form>
-                                                    <button type="button" class="btn-desagree" data-dismiss="modal">
-                                                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                                                        Non
-                                                    </button>
-                                                </div>
+                                                </form>
+                                                <button type="button" class="btn-desagree" data-dismiss="modal">
+                                                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                    Non
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fa fa-file" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>Moi</td>
+                            <td>17:00</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">
+                                <form action="" style="display: inline;">
+                                    <input type="checkbox" name="" id="" style="margin-right: 1.5rem;">
+                                </form>
+                                <a href="#" class="favorite">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </a>
+                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            </td>
+                            <td>
+                                <a href="#">
                                     cours css
-                                </td>
-                                <td>
-                                    <!--ajouter fichier-->
-                                    <button type="button" class="btn-save" data-toggle="modal" data-target="#staticBackdrop">
-                                        <i class="fa fa-recycle" aria-hidden="true"></i>
-                                        Récupérer
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">Récupération</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
+                                </a>
+                            </td>
+                            <td>
+                                <!--recupérer fichier-->
+                                <button type="button" class="btn-save" data-toggle="modal" data-target="#staticBackdrop">
+                                    <i class="fa fa-recycle" aria-hidden="true"></i>
+                                    Récupérer
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Suppression</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Etes vous sur de vouloir le récupérer ?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="">
+                                                    <button type="submit" class="btn-agree">
+                                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                        Oui
                                                     </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Etes vous sur de vouloir le récupérer  ?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <form action="">
-                                                        <button type="submit" class="btn-agree">
-                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                            Oui
-                                                        </button>
-                                                    </form>
-                                                    <button type="button" class="btn-desagree" data-dismiss="modal">
-                                                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                                                        Non
-                                                    </button>
-                                                </div>
+                                                </form>
+                                                <button type="button" class="btn-desagree" data-dismiss="modal">
+                                                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                    Non
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                </div>
+                            </td>
+                            <td>Moi</td>
+                            <td>17:00</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -264,7 +301,6 @@
     <!--***JS ressources***-->
     <script src="ressources/js/jquery.js"></script>
     <script src="ressources/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="ressources/js/main.js"></script>
 </body>
 </html>
