@@ -103,6 +103,7 @@ a:hover{
     background: var(--color-purple);
     padding: 1rem .7rem;
     display: none;
+    z-index: 2000;
 }
 
 .sidebar-control{
@@ -169,4 +170,20 @@ a:hover{
 }
 
 .content{
+    padding: 2rem 0;
 }
+
+.content h3, .content p{
+    text-align: center;
+}
+
+.box-actions{
+    margin-top: 3rem;
+    padding-top: 3rem;
+}
+
+.box-actions .func-card{
+    height: 30rem;
+    /* background: red; */
+}
+

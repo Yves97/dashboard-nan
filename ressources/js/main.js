@@ -1,5 +1,5 @@
 $('.sidebar-control').click(function(){
-    $('.sidebar').animate({width: 'toggle'})
+    $('.sidebar').animate({height: 'toggle'})
     // if($('.sidebar-control img').attr("src","ressources/images/menu.svg")){
     //     $('.sidebar-control img').attr("src","ressources/images/cancel.svg")
     //     if($('.sidebar-control img').attr("src","ressources/images/cancel.svg")){
