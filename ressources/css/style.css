@@ -145,7 +145,7 @@ a:hover{
     z-index: 500;
 }
 
-.sidebar-control{
+/* .sidebar-control{
     cursor: pointer;
     height: 4.5rem;
     width: 4.5rem;
@@ -161,7 +161,7 @@ a:hover{
 
 .sidebar-control:focus{
     outline: none;
-}
+} */
 
 .sidebar a .create-btn, .sidebar .load-btn,.lft-box_two button{
     cursor: pointer;
@@ -190,11 +190,13 @@ a:hover{
 .sidebar-text_content ul li{
     display: block;
     margin-bottom: 1.2rem;
-    transition: var(--default-transition);
 }
 
-.sidebar-text_content ul li:hover{
-    transform: translateX(2%);
+.sidebar-text_content ul li button{
+    border: none;
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
 }
 
 .sidebar-text_content a, .sidebar-text_moreContent a{
